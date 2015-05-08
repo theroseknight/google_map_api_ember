@@ -1,23 +1,27 @@
 import Ember from 'ember';
-
+//This component expects to be created with a longitude and a latitude set {{google-summary-map latitude="37.8282" longitude="-98.5795" markers=markers}}
+//The markers should be present on the Vacation model object that is loading the component
 export default Ember.Component.extend({
-  //Will be dynamically created, filled with test data for now
+  //Will be dynamically createdby Vacation model, filled with test data for now
   markers: [
     Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
     Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
     Ember.Object.create({ latitude: 29.7604, longitude: -95.3698}),  // Houston
     Ember.Object.create({ latitude: 39.7392, longitude: -104.9903})  // Denver
   ],
+  //Create the blank map
   insertMap: function() {
+    //jQuery grabs the div on google-summary-map.hbs template
     var container = this.$('.map-canvas')[0];
     var options = {
-        center: new window.google.maps.LatLng(
-            this.get('latitude'),
-            this.get('longitude')
-        ),
-        zoom: 4
+      //Default map centers on the middle of the United States when no Polylines exist.  Polylines will recenter the map based on waypoints.
+      center: new window.google.maps.LatLng(
+        this.get('latitude'),
+        this.get('longitude')
+      ),
+      zoom: 4
     };
-    new window.google.maps.Map(container, options);
+    //Create the map in the DOM and save it for use by the markers and polylines functions
     this.set('map', new google.maps.Map(container, options));
     this.setMarkers();
     this.createPolylines();
@@ -43,10 +47,7 @@ export default Ember.Component.extend({
       new google.maps.LatLng(39.7392,-104.9903),
       new google.maps.LatLng(40.71356,-74.00632)
     ];
-    //markers.forEach(function(marker){
-      //pathCoordinates.push(new google.maps.LatLng(marker.get('latitude'),marker.get('longtitude')))
-    //})
-    console.log(pathCoordinates)
+
     var finalPath = new google.maps.Polyline({
       path: pathCoordinates,
       strokeColor: '#FF0000',
