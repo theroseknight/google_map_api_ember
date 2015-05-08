@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  //Will be dynamically created, filled with test data for now
   markers: [
     Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
     Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
