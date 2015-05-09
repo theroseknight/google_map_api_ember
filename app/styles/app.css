@@ -1,4 +1,88 @@
-.map-canvas {
-    height: 370px;
-    width: 800px;
+/*************************************LANDING PAGE *********************************************************/
+/* Setting up the core framework of the page to be responsive*/
+html, body, body > .ember-view, .ember-view > .container, .container > .ember-view {
+  height: 100%;
+  width: 100%;
+  background-color: #F4F4F4;
 }
+
+
+.row-header {
+  height: 10%;
+  width: 100%;
+  position: relative;
+}
+
+.btn-group-justified {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.btn-group-justified > .btn {
+  width: 8%;
+  margin-left: 1% !important;
+  margin-right: 1% !important;
+  min-width: 90px;
+  margin-bottom: .5%;
+  font-family: 'BenchNine', sans-serif;
+  background-color: #F4F4F4;
+  border-color: #F4F4F4;
+}
+
+.btn-group-justified > .btn:hover {
+  background-color: #5300A6;
+  color: white;
+  font-size: 15px;
+}
+
+.row-content {
+  height: 60%;
+  width: 100%;
+}
+
+.row-content > .col-xs-8, .row-content > .col-xs-8 > .ember-view, .row-content > .col-xs-2, .row-content > .col-xs-2 > .ember-view {
+  height: 100%;
+}
+
+.row-content > .col-xs-8 {
+  padding: 0px;
+}
+
+.row-content > .col-xs-8:hover {
+  border-color: #5300A6;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.row-content > .col-xs-2 {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 0px;
+}
+
+.row-content > .col-xs-2 {
+  width: 12.666666667%
+}
+
+.row-content > .col-xs-8 {
+  width: 62.66666667%;
+}
+
+.map-canvas {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.row-footer {
+  height: 30%;
+  width: 100%;
+}
+
+/*********************************************&**********************************************************/

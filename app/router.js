@@ -6,4 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.route("home",{path:"/"},function(){
+
+  });
+  this.route("staticLanding");
 });
