@@ -22,7 +22,7 @@ export default Ember.Route.extend({
         success:function(data){
           $('#newVacationModal').modal('hide');
           controller.store.push("vacation",controller.store.normalize("vacation",data.vacation));
-          route.transitionTo('vacations/vacation'+ "/" + data.vacation.id) 
+          route.transitionTo('/vacation'+ "/" + data.vacation.id)
         },
         error:function(){
           console.log("fail");

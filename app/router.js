@@ -11,9 +11,10 @@ export default Router.map(function() {
   });
   this.resource("vacations", function(){
     this.route("new")
-    this.resource("vacation",{path:"vacation/:vacationId"},function(){
 
-    });
+  });
+  this.resource("vacation",{path:"vacation/:vacationId"},function(){
+
   });
 
 });
