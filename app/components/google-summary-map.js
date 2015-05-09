@@ -38,8 +38,8 @@ export default Ember.Component.extend({
     }, this);
   }.observes('markers.@each.latitude', 'markers.@each.longitude'),
   createPolylines: function() {
-    var map = this.get('map')
-    var markers = this.get('markers');
+    var map = this.get('map');
+    //var markers = this.get('markers');
     var pathCoordinates = [
       new google.maps.LatLng(40.71356,-74.00632),
       new google.maps.LatLng(25.7753,-80.2089),
@@ -48,12 +48,12 @@ export default Ember.Component.extend({
       new google.maps.LatLng(40.71356,-74.00632)
     ];
 
-    var finalPath = new google.maps.Polyline({
-      path: pathCoordinates,
-      strokeColor: '#FF0000',
-      strokeOpacity: 1.0,
-      strokeWeight: 2
-    })
+    //var finalPath = new google.maps.Polyline({
+      //path: pathCoordinates,
+      //strokeColor: '#FF0000',
+      //strokeOpacity: 1.0,
+      //strokeWeight: 2
+    //});
 
     var service = new google.maps.DirectionsService();
 
@@ -62,7 +62,7 @@ export default Ember.Component.extend({
     directionsDisplay.setMap(map);
 
     var waypts = [];
-    var j=0
+    var j=0;
     for(j=1;j<pathCoordinates.length-1;j++){
       waypts.push({location: pathCoordinates[j],stopover: true});
     }
@@ -75,7 +75,7 @@ export default Ember.Component.extend({
     };
 
     service.route(request,function(result, status) {
-      if(status == google.maps.DirectionsStatus.OK){
+      if(status === google.maps.DirectionsStatus.OK){
         directionsDisplay.setDirections(result);
       }else{
         alert("Directions request failed:" +status);

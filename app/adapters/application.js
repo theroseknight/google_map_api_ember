@@ -2,9 +2,9 @@ import Ember from "ember";
 import DS from "ember-data";
 import ENV from '../config/environment';
  if (ENV.environment === 'development') {
-   var host='http://localhost:3000'
+   var host='http://localhost:3000';
  }else{
-   var host='https://toolbelt.kaufmanrossin.com'
+   var host='https://toolbelt.kaufmanrossin.com';
  }
   Ember.$.ajaxSetup({
     xhrFields: {

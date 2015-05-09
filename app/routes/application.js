@@ -11,7 +11,7 @@ export default Ember.Route.extend({
       //controller.set("baseUrl","https://toolbelt.kaufmanrossin.com/api/printing/")
       //controller.set("baseWebsocketUrl","wss://toolbelt.kaufmanrossin.com/api/printing/")
     }else{
-      controller.set("baseUrl","http://localhost:3000")
+      controller.set("baseUrl","http://localhost:3000");
       //controller.set("baseWebsocketUrl","ws://localhost:3000/api/printing/")
     }
 	},
