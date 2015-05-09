@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+actionsArray=[{action:"resetMap", label:"Reset Map"},{action:"share", label:"Share"},{action:"print", label:"Print"},{action:"newVacation", label:"New Vacation"},{action:"editVacation", label:"Edit"},{action:"deleteVacation", label:"Delete"}]
+
 export default Ember.Component.extend({
   markers: [
     Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York

@@ -9,5 +9,10 @@ export default Router.map(function() {
   this.route("home",{path:"/"},function(){
 
   });
-  this.route("staticLanding");
+  this.route("vacations", function(){
+
+  });
+  this.route("vacationGenerator", function(){
+
+  });
 });

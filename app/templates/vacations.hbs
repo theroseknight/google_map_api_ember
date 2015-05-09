@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row row-header">
+    {{action-bar actionsArray=actionsArray  outerController=this}}
+  </div>
+  <div class="row row-content">
+    <div class="col-xs-2" id="left-landing-column">
+    </div>
+    <div class="col-xs-8">
+      {{google-summary-map latitude="37.8282" longitude="-98.5795" markers=markers}}
+    </div>
+    <div class="col-xs-2" id="right-landing-column">
+    </div>
+  </div>
+  <div class="row row-footer">
+    {{vacation-carousel}}
+  </div>
+</div>
