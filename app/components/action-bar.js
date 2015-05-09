@@ -5,5 +5,8 @@ export default Ember.Component.extend({
     resetMap:function(){
       window.location.reload(true);
     },
+    createLeg:function(){
+      
+    }
   }
 });
