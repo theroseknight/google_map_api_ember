@@ -146,3 +146,12 @@ html, body, body > .ember-view, .ember-view > .container, .container > .ember-vi
 }
 
 /*********************************************&**********************************************************/
+
+.vacation-summary-name-holder {
+  width: 100%;
+  text-align: center;
+}
+
+.vacation-summary-name {
+  font-family: 'BenchNine', sans-serif;
+}

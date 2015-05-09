@@ -14,7 +14,9 @@ export default Router.map(function() {
 
   });
   this.resource("vacation",{path:"vacation/:vacationId"},function(){
+    this.resource("legs"),function(){
 
+    }
   });
 
 });
