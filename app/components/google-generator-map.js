@@ -55,7 +55,7 @@ export default Ember.Component.extend({
       //strokeWeight: 2
     //});
 
-    if(pathCoordinates.length != 0){
+    if(pathCoordinates.length !== 0){
       var service = new google.maps.DirectionsService();
 
       var directionsDisplay = new google.maps.DirectionsRenderer();
@@ -83,13 +83,13 @@ export default Ember.Component.extend({
         }
       });
     }else{
-      console.log("No Legs Yet")
+      console.log("No Legs Yet");
     }
   }.observes('pathCoordinates.@each'),
   actions: {
     addMarker: function(){
-      var markers = this.get('markers')
-      console.log(markers)
+      var markers = this.get('markers');
+      console.log(markers);
     }
   }
 });

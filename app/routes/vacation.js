@@ -1,7 +1,7 @@
 import Ember from 'ember';
 export default Ember.Route.extend({
-  model: function() {
-	 return this.store.find("vacation");
+  model: function(params) {
+    return this.store.find("vacation",params.vacationId);
 	},
   setupController:function(controller){
     this._super();
@@ -9,10 +9,8 @@ export default Ember.Route.extend({
       'actionsArray',
       [
         {action:"resetMap", label:"Reset Map"},
-        {action:"share", label:"Share"},
-        {action:"print", label:"Print"},
-        {link:"vacations.new", label:"New Vacation"},
-        {action:"editVacation", label:"Edit"},
+        {link:"vacations", label:"Return Home"},
+        {action:"addLeg", label:"Add Leg"},
         {action:"deleteVacation", label:"Delete"}
       ]
     );

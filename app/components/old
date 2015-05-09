@@ -1,4 +1,5 @@
 import Ember from 'ember';
+{{new-resource-modal title="New Vacation" modalId="newTaxReturnModal" outerController=this closeTransition="vacations" inputsArray=inputsArray resourceUrl="vacations" successTransition="vacations/vacation"}}
 
 actionsArray=[{action:"resetMap", label:"Reset Map"},{action:"share", label:"Share"},{action:"print", label:"Print"},{action:"newVacation", label:"New Vacation"},{action:"editVacation", label:"Edit"},{action:"deleteVacation", label:"Delete"}]
 

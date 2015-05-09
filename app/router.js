@@ -9,10 +9,11 @@ export default Router.map(function() {
   this.route("home",{path:"/"},function(){
 
   });
-  this.route("vacations", function(){
+  this.resource("vacations", function(){
+    this.route("new")
+    this.resource("vacation",{path:"vacation/:vacationId"},function(){
 
+    });
   });
-  this.route("vacationGenerator", function(){
 
-  });
 });

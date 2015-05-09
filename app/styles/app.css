@@ -10,6 +10,16 @@ html, body, body > .ember-view, .ember-view > .container, .container > .ember-vi
   padding: 0px;
 }
 
+.modal-dialog {
+ display:black;
+ overflow: auto;
+}
+
+.modal-dialog > .modal-content {
+  display:black;
+  overflow: auto;
+  padding-bottom: 3%;
+}
 
 .row-header {
   height: 10%;
