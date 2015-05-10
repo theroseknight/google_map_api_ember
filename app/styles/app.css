@@ -130,6 +130,18 @@ html, body, body > .ember-view, .ember-view > .container, .container > .ember-vi
   width: 100%;
 }
 
+.row-footer > .ember-view > .ember-view {
+  height: 100%;
+  width: 33%;
+  float: left;
+}
+
+.row-footer > .ember-view > .ember-view > .map-canvas {
+  height: 1000%;
+  width: 100%;
+  float: left;
+}
+
 .row-footer > .ember-view > #slider1_container {
   margin-left: 2%;
   margin-right: 2%;

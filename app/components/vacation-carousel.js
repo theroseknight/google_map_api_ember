@@ -3,6 +3,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   insertCarousel: function() {
-
+    console.log("here")
+    var component = this;
+    var controller=component.get('outerController');
+    console.log(controller.get('model').length)
   }.on('didInsertElement')
 });
