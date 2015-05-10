@@ -19,7 +19,7 @@ export default Ember.Component.extend({
         this.get('latitude'),
         this.get('longitude')
       ),
-      zoom: 2
+      zoom: 4
     };
     //Create the map in the DOM and save it for use by the markers and polylines functions
     this.set('map', new google.maps.Map(container, options));

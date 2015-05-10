@@ -2,7 +2,7 @@ import Ember from "ember";
 import DS from "ember-data";
 Ember.$.ajaxSetup({
   xhrFields: {
-    withCredentials: true
+    withCredentials: false
   }
 });
 export default DS.ActiveModelAdapter.extend({
@@ -13,7 +13,7 @@ export default DS.ActiveModelAdapter.extend({
   ajax: function(url, method, hash) {
     hash = hash || {};
     hash.crossDomain = true;
-    hash.xhrFields = {withCredentials: true};
+    hash.xhrFields = {withCredentials: false};
     return this._super(url, method, hash);
   }
 });

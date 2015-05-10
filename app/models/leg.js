@@ -4,10 +4,12 @@ var attr=DS.attr;
 export default DS.Model.extend({
   name: attr(),
   startingCity: attr(),
-  endingcity: attr(),
-  startingCoordinateOne: attr(),
-  startingCoordinateTwo: attr(),
-  endingCoordinateOne: attr(),
-  endingCoordinateTwo: attr(),
+  startingState: attr(),
+  endingCity: attr(),
+  endingState: attr(),
+  startingLat: attr(),
+  startingLng: attr(),
+  endingLat: attr(),
+  endingLng: attr(),
   vacation:DS.belongsTo("vacation",{async:true})
 });

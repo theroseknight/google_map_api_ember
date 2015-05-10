@@ -10,7 +10,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-eval' https://*.googleapis.com http://*.googleapis.com https://*.gstatic.com", // Allow scripts from https://cdn.mxpnl.com
       'font-src': "'self' https://*.gstatic.com http://fonts.gstatic.com/s/benchnine/v4/qZpi6ZVZg3L2RL_xoBLxWegdm0LZdjqr5-oayXSOefg.woff2 http://fonts.gstatic.com/s/benchnine/v4/qZpi6ZVZg3L2RL_xoBLxWT0LW-43aMEzIO6XUTLjad8.woff2", // Allow fonts to be loaded from http://fonts.gstatic.com
-      'connect-src': "'self' localhost:3000", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
+      'connect-src': "'self' localhost:3000 https://*.googleapis.com", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
       'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
       'style-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.googleapis.com http://*.gstatic.com http://fonts.googleapis.com/css?family=BenchNine:700", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
       'media-src': "'self'"

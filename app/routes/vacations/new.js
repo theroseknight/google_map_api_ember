@@ -12,7 +12,6 @@ export default Ember.Route.extend({
     create:function(){
       var route = this;
       var controller = this.controllerFor('vacations.new')
-      console.log(controller.get('name'))
       $.ajax({
         url:"http://localhost:3000/vacations",
         method:"POST",
