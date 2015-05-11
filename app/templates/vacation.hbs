@@ -1,2 +1,22 @@
-{{outlet}}
+<div class="container">
+  <div class="row row-header">
+    {{action-bar actionsArray=model.actionsArray outerController=this}}
+  </div>
+  <div class="row row-content">
+    <div class="col-xs-2" id="left-landing-column">
+      {{vacation-summary name=model.name}}
+    </div>
+    <div class="col-xs-8">
+      {{log "below"}}
+      {{log model}}
+      {{google-generator-map latitude="37.8282" longitude="-98.5795" markers=model.markers}}
+    </div>
+    <div class="col-xs-2" id="right-landing-column">
+    </div>
+  </div>
+  <div class="row row-footer">
+    {{outlet}}
+  </div>
+</div>
+
 {{log "Vacation Handlebars"}}

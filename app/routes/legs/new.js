@@ -50,11 +50,23 @@ export default Ember.Route.extend({
 
                   var startingMarker = Ember.Object.create({ latitude: controller.get("model.startingLat"), longitude: controller.get("model.startingLng") })
                   var endingMarker = Ember.Object.create({ latitude: controller.get("model.endingLat"), longitude: controller.get("model.endingLng") })
-                  var currentMarkers = route.controllerFor('vacation.index').get('markers')
+                  var currentMarkers = route.controllerFor('vacation').get('model.markers')
+                  console.log(currentMarkers)
+                  if(currentMarkers===undefined){
+                    currentMarkers = [];
+                  }else{
+                    currentMarkers = route.controllerFor('vacation').get('model.markers')
+                  }
+
+
                   currentMarkers.push(startingMarker);
                   currentMarkers.push(endingMarker);
-                  route.controllerFor('vacation.index').set('markers',currentMarkers)
-
+                  console.log(currentMarkers)
+                  console.log("above")
+                  console.log(route.controllerFor('vacation').get('model'))
+                  route.controllerFor('vacation').set('model.markers',currentMarkers)
+                  console.log(route.controllerFor('vacation').get('model.markers'))
+                  console.log("its this one")
                   route.transitionTo('/vacation'+ "/" + controller.get('model.id'))
                 },
                 error:function(){

@@ -4,8 +4,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   //Will be dynamically createdby Vacation model, filled with test data for now
   markers: [
-    Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
-    Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
+    //Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
+    //Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
     //Ember.Object.create({ latitude: 29.7604, longitude: -95.3698}),  // Houston
     //Ember.Object.create({ latitude: 39.7392, longitude: -104.9903})  // Denver
   ],
@@ -30,6 +30,7 @@ export default Ember.Component.extend({
   setMarkers: function() {
     var map = this.get('map');
     var markers = this.get('markers');
+    console.log(markers)
 
     markers.forEach(function(marker){
       new google.maps.Marker({
