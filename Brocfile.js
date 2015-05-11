@@ -23,6 +23,7 @@ app.import('vendor/gmaps.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 app.import('bower_components/components-font-awesome/css/font-awesome.css');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+app.import('bower_components/bootstrap/dist/css/bootstrap.css.map');
 app.import('bower_components/jssor-slider/js/jssor.js')
 app.import('bower_components/jssor-slider/js/jssor.slider.js')
 app.import('app/styles/app.css');

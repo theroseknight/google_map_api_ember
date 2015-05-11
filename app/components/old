@@ -48,7 +48,7 @@ export default Ember.Component.extend({
     //markers.forEach(function(marker){
       //pathCoordinates.push(new google.maps.LatLng(marker.get('latitude'),marker.get('longtitude')))
     //})
-    console.log(pathCoordinates)
+
     var finalPath = new google.maps.Polyline({
       path: pathCoordinates,
       strokeColor: '#FF0000',

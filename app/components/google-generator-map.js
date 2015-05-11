@@ -4,13 +4,14 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   //Will be dynamically createdby Vacation model, filled with test data for now
   markers: [
-    //Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
-    //Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
+    Ember.Object.create({ latitude: 40.71356, longitude: -74.00632 }), // New York
+    Ember.Object.create({ latitude: 25.7753, longitude: -80.2089 }), // Miami
     //Ember.Object.create({ latitude: 29.7604, longitude: -95.3698}),  // Houston
     //Ember.Object.create({ latitude: 39.7392, longitude: -104.9903})  // Denver
   ],
   //Create the blank map
   insertMap: function() {
+    console.log("Google Summary Map component js file with didInsertElement")
     //jQuery grabs the div on google-summary-map.hbs template
     var container = this.$('.map-canvas')[0];
     var options = {
@@ -89,7 +90,6 @@ export default Ember.Component.extend({
   actions: {
     addMarker: function(){
       var markers = this.get('markers');
-      console.log(markers);
     }
   }
 });

@@ -11,6 +11,7 @@ export default DS.ActiveModelAdapter.extend({
   },
   host: 'http://localhost:3000',
   ajax: function(url, method, hash) {
+    console.log("Adapters - application.js")
     hash = hash || {};
     hash.crossDomain = true;
     hash.xhrFields = {withCredentials: false};

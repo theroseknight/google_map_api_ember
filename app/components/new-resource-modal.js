@@ -7,7 +7,6 @@ export default Ember.Component.extend({
     var component = this;
     var controller=component.get('outerController');
     var fullModalId = "#" + component.get('modalId')
-    console.log(fullModalId)
     $(fullModalId).modal();
     $('.btn').removeClass("active");
     $(fullModalId).on("hidden.bs.modal",function(){
@@ -16,7 +15,6 @@ export default Ember.Component.extend({
   }.on('didInsertElement'),
   actions: {
     create:function(){
-      console.log(this.get('name'))
       var component = this;
       var controller=component.get('outerController');
       var fullModalId = "#" + component.get('modalId')

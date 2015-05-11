@@ -2,6 +2,7 @@ import Ember from 'ember';
 import ENV from '../config/environment';
 export default Ember.Route.extend({
   setupController:function(controller){
+    console.log("Route - Application - setupController")
 		this._super();
 		controller.set("screenWidth",screen.width);
 		controller.set("screenHeight",screen.height);
